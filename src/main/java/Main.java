@@ -40,8 +40,7 @@ public class Main {
             } else {
                 continue;
             }
-        }
-        return requiredAmountOfTrueValidations == actualAmountOfTrueValidations;
+        } return requiredAmountOfTrueValidations == actualAmountOfTrueValidations;
     }
 
     public static String[] splitString(String inputString) {
@@ -69,8 +68,7 @@ public class Main {
             } catch (NumberFormatException e) {
                 continue;
             }
-        }
-        numericValidator = numCounter > 0;
+        } numericValidator = numCounter > 0;
         return numericValidator;
     }
 
@@ -80,21 +78,16 @@ public class Main {
         boolean capsValidator;
         int lowerCounter = 0;
         int upperCounter = 0;
-
         for (String element : splitString(inputPassword)) {
-
             char character = element.charAt(0);
-
             if (Character.isLetter(character)) {
-
                 if (Character.isLowerCase(character)) {
                     lowerCounter++;
                 } else if (Character.isUpperCase(character)) {
                     upperCounter++;
                 }
             }
-        }
-        capsValidator = lowerCounter > 0 && upperCounter > 0;
+        } capsValidator = lowerCounter > 0 && upperCounter > 0;
         return capsValidator;
     }
 
@@ -102,7 +95,6 @@ public class Main {
     public static boolean validatePasswordStrength (String inputPassword) {
 
         boolean passwordStrengthValidator = false;
-
         String[] poorPasswords = {"admin", "passwort", "123456"};
 
         for (int i = 0; i < poorPasswords.length; i++) {
@@ -111,8 +103,7 @@ public class Main {
             } else {
                 passwordStrengthValidator = true;
             }
-        }
-        return passwordStrengthValidator;
+        } return passwordStrengthValidator;
     }
 
     // (Sonderzeichen)
@@ -127,8 +118,7 @@ public class Main {
             } else {
                 continue;
             }
-        }
-        return specialCounter > 0;
+        } return specialCounter > 0;
     }
 
 }
