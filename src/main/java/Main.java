@@ -51,9 +51,7 @@ public class Main {
     public static boolean validateLength(String inputPassword) {
 
         int minimumLength = 8;
-        boolean lengthValidator;
-        lengthValidator = splitString(inputPassword).length >= minimumLength;
-        return lengthValidator;
+        return splitString(inputPassword).length >= minimumLength;
     }
 
     // Zahlen enthalten?
